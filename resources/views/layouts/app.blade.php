@@ -84,11 +84,11 @@
       u2.imagen_perfil,
       COUNT(*) AS cantidad_de_seguidores
       FROM
-      redev.followers AS f1
+      followers AS f1
       JOIN
-      redev.followers AS f2 ON f1.follower_id = f2.user_id
+      followers AS f2 ON f1.follower_id = f2.user_id
       JOIN
-      redev.users AS u2 ON f2.user_id = u2.id
+      users AS u2 ON f2.user_id = u2.id
       WHERE
       f1.user_id = ' . auth()->user()->id . '
       AND f2.follower_id = ' . auth()->user()->id . '
@@ -120,7 +120,7 @@
       </div>
       @endforeach
       @else
-      Sin seguidores
+
       @endif
       @endauth
 

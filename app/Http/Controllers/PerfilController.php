@@ -46,7 +46,7 @@ class PerfilController extends Controller
 
         $user = User::find(auth()->user()->id);
         $user->username = $request->username;
-        $user->descripcion_perfil = $request->descripcion;
+        $user->descripcion_perfil = $request->descripcion ?? '';
         $user->imagen_perfil = $img_unique_id ?? auth()->user()->imagen_perfil ?? '';
 
         $user->save();

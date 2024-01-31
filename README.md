@@ -1,66 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# MyFaceless
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+MyFaceless es una aplicación de libre uso inspirada en el diseño de Instagram. La característica distintiva es que los usuarios deben seguirse mutuamente para poder ver sus contenidos. Esto significa que será de contenido privado, y solo los usuarios que se sigan mutuamente podrán acceder a su contenido. De lo contrario, deberás esperar a que el usuario que seguiste comience a seguirte, o viceversa.
 
-## About Laravel
+si tienes alguna duda o pregunta, contáctame acá: Miguel.sarpi@gmail.com.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Para usar este proyecto adecuadamente necesitas tener instalado:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+estos pasos son adecuados para su funcionamiento en windows, pero fue creado mediante docker con WSL con una distribución de ubuntu y "Sail", en las próximas actualizaciones traeré los pasos a pasos para que puedan usarlo de esa manera.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[PHP v8.1.12 o superior](https://www.php.net/downloads)  
+[Laravel v10 o superior](https://laravel.com/)  
+[composer v2.4.4 o superior](https://getcomposer.org/)  
+[node v20.9.0](https://nodejs.org/en)  
+[xampp](https://www.apachefriends.org/es/download.html)  
+[ImageMagick (requerido si usaras windowds)](https://imagemagick.org/script/download.php)
 
-## Learning Laravel
+Opcional:  
+[vsCode](https://code.visualstudio.com/)  
+[Dbeaver](Dbeaver)  
+[git bash](https://git-scm.com/downloads)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Configuración de XAMPP y Creación de Base de Datos Local
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Esta guía te ayudará a configurar XAMPP y crear una base de datos local para tu aplicación.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Paso 1: Descargar e Instalar XAMPP
 
-## Laravel Sponsors
+Descarga e instala XAMPP desde [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Paso 2: Iniciar Apache y MySQL
 
-### Premium Partners
+Inicia XAMPP y asegúrate de que los servicios de Apache y MySQL estén activos.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Paso 3: Acceder a phpMyAdmin
 
-## Contributing
+Abre tu navegador y visita [http://localhost/phpmyadmin](http://localhost/phpmyadmin) para acceder a la interfaz de administración de MySQL (phpMyAdmin).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Paso 4: Crear una Nueva Base de Datos
 
-## Code of Conduct
+1. Haz clic en la pestaña "Bases de datos" en phpMyAdmin.
+2. Ingresa un nombre para tu nueva base de datos en el campo "Crear nueva base de datos".
+3. Haz clic en el botón "Crear".
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Con esto ya tendremos una base de datos lista para usarse, debes guardar el nombre de la base de datos para usarlo a futuro.
 
-## Security Vulnerabilities
+## Guía de Instalación para MyFaceless
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Paso 1: Descargar el Repositorio
+
+```bash
+git clone https://github.com/MSarpi/myfaceless.git
+```
+
+### Paso 2: Instalar Dependencias
+
+Después de descargar el repositorio, accede a la carpeta y ejecuta los siguientes comandos para instalar las dependencias dentro de la carpeta raíz del proyecto:
+
+```bash
+composer install
+npm install
+```
+
+### Paso 3: Configurar el Archivo .env
+
+Copia el archivo .env.example y pégalo en la misma raíz de la carpeta, renombrándolo como .env. Abre el archivo .env y modifica la entrada db_database con el nombre que pusiste al crear la tabla con xampp.  
+debería quedar asi:
+
+```php
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_de_tu_base_de_datos
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### Paso 6: Migrar y Sembrar la Base de Datos (Laravel)
+
+Si estás utilizando Laravel, ejecuta los siguientes comandos en tu terminal:
+
+```bash
+php artisan migrate --seed
+```
+
+Estos comandos crearán las tablas necesarias en tu base de datos y pueden llenarlas con datos de ejemplo si has configurado semillas (seeds).
+
+¡Listo! Ahora deberías tener XAMPP configurado con una base de datos local para tu aplicación.
+
+Recuerda personalizar según las necesidades específicas de tu proyecto. Esta guía asume que estás utilizando Laravel como se mencionó anteriormente, así que ajusta las instrucciones según el tipo de aplicación que estás desarrollando.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[SarpiDesign](https://sarpidesign.netlify.app/)

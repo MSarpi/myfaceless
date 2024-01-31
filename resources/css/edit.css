@@ -141,7 +141,7 @@ body{
     width: 250px;
     height: 100%;
     overflow: hidden;
-    padding: 20px 15px;
+    padding: 10px 5px;
     background-color: var(--color-barra-lateral);
     transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
     z-index: 50;
@@ -152,13 +152,23 @@ body{
 }
 
 .mini-barra-lateral{
-    width: 80px;
+    width: 90px;
 }
+
+.mini-barra-lateral img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mini-barra-lateral ion-icon{
+    margin: auto;
+}
+
 .barra-lateral span{ 
     /* esta seccion es de "nuevo post" */
     width: 100px;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: rem;
     text-align: left;
     opacity: 1;
     transition: opacity 0.5s ease,width 0.5s ease;
@@ -176,7 +186,7 @@ body{
     white-space: nowrap;
     font-size: 1.4rem;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 5px;
     align-items: center;
     opacity: 1;
     transition: opacity 0.5s ease,width 0.5s ease;
@@ -190,7 +200,7 @@ body{
 /*------------> Nombre de la página */
 .barra-lateral .nombre-pagina{
     width: 100%;
-    height: 45px;
+    height: 30px;
     color: var(--color-texto);
     margin-bottom: 10px;
     display: flex;
@@ -212,7 +222,7 @@ body{
 /*------------> Botón*/
 .barra-lateral .boton{
     width: 100%;
-    height: 45px;
+    height: 40px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -222,8 +232,6 @@ body{
     background-color: var(--color-boton);
     color: var(--color-boton-texto);
 }
-
-
 
 /*--------------> Menu Navegación*/
 .barra-lateral .navegacion{
@@ -247,7 +255,8 @@ body{
     margin-bottom: 5px;
 }
 .barra-lateral .navegacion a{
-    padding: 1rem 1rem 1rem 0;
+    padding-top: 20px;
+    padding-bottom: 20px; 
     width: 100%;
     height: 20px;
     display: flex;
@@ -413,6 +422,13 @@ main.min-main{
     
 }
 
+.img_follow_no_post{
+    filter: drop-shadow(15px 15px 5px var(--color-bg-img));
+    width: 50%;
+}
+
+
+
 @media (max-width: 1193px){
     .img_registro{
         display: none;
@@ -426,6 +442,11 @@ main.min-main{
     }
 
     .img_follow{
+        width: 100%;
+        
+    }
+
+    .img_follow_no_post{
         width: 100%;
         
     }

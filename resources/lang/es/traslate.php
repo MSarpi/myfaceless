@@ -22,7 +22,7 @@ return [
         'tac_1' => '¿Aceptas los',
         'tac_2' => 'Términos y condiciones',
         'create' => 'Crear cuenta',
-        'acounte' => '¿Ya tienes una cuenta en Devstagram?',
+        'acounte' => '¿Ya tienes una cuenta en Faceless?',
         'acounte_1' => 'Inicia sesión aquí',
         'tycunchecket' => 'Acepte terminos y condiciones de uso',
     ],
@@ -77,17 +77,19 @@ return [
         'follower' =>  "Seguidor",
         'followers' =>  "Seguidores",
         'message' => [
-            'private' => 'Los perfiles de Devstagram son privados; debes seguirlo/a y esperar a que te siga de vuelta para poder ver su contenido.',
+            'private' => 'Los perfiles de Faceless son privados; debes seguirlo/a y esperar a que te siga de vuelta para poder ver su contenido.',
             'onefollow' => 'Perfecto, ahora solo tienes que esperar a que te sigan de vuelta.',
             'onefolower' => 'Este usuario te está siguiendo; comienza a seguirlo/a para que puedan compartir contenido entre ustedes',
             'imagen_no_follow' => '<img class="img_follow" src="' . asset("img/peep-52-no-follow-es.png") . '" alt="">',
             'imagen_follow_no_follow' => '<img class="img_follow" src="' . asset("img/peep-follow-no-follow-es.png") . '" alt="">',
             'imagen__no_follow_follow' => '<img class="img_follow" src="' . asset("img/peep-no-follow-follow-es.png") . '" alt="">',
+            'imagen__no_post' => '<img class="img_follow_no_post" src="' . asset("img/peep-no-post-es.png") . '" alt="">',
         ]
     ],
 
     'page' => [
         'home' => "Inicio",
+        'post' => "Publicaciones",
     ]
 
 

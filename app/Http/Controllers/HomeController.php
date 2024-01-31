@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Follower;
 use App\Models\PostModel;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -19,6 +20,7 @@ class HomeController extends Controller
         $idUsers = auth()->user()->following->pluck('id')->toArray();
         $user = User::whereIn('id', $idUsers)->orderBy('created_at', 'desc')->paginate(20);
         $posts = PostModel::whereIn('user_id', $idUsers)->orderBy('created_at', 'desc')->paginate(20);
+        $follower = Follower::where('user_id', auth()->user()->id);
 
         return view(
             'home',

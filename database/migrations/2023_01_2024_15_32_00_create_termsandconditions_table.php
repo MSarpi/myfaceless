@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('termsandconditions', function (Blueprint $table) {
             $table->id();
             $table->string('tac');
+            $table->timestamps();
         });
     }
 
